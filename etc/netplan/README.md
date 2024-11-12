@@ -17,7 +17,7 @@ This command applies the current Netplan configuration, making any changes take 
 To check the network interfaces and their configurations, use the following command:
 
 ```sh
-ip -a
+ip addr show
 ```
 
 This command displays detailed information about all network interfaces on the server.

@@ -1,0 +1,9 @@
+network:
+  version: 2
+  renderer: networkd
+  wifis:
+    wlp2s0:  # Use 'wlp2s0' as per Wi-Fi interface name
+      dhcp4: yes
+      access-points:
+        "DOT99 NET FIBER2HOME":
+          password: "**********"

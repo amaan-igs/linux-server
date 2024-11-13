@@ -15,7 +15,7 @@ This guide explains how to reserve an IP address for your Wi-Fi interface in you
 ### 3. Set Up an IP Reservation
 - Look for a DHCP Reservation or Static IP Assignment option.
 - Add a new entry:
-    - **MAC Address**: Replace colons with hyphens and use uppercase letters. For example, `F4-B7-E2-A0-3B-01`.
+    - **MAC Address**: Replace colons with hyphens and use uppercase letters. For example, `F4-A0-3B-01-3B-01`.
     - **IP Address**: Set it to `192.168.1.106` or another desired IP within your router’s IP range.
 
 ### 4. Save and Apply
@@ -29,7 +29,7 @@ After setting this up, your server should receive the same IP address each time 
 
 ### Invalid MAC Address Format
 If your router requires the MAC address in the `XX-XX-XX-XX-XX-XX` format:
-- Convert the MAC address `f4:b7:e2:a0:3b:01` to `F4-B7-E2-A0-3B-01`.
+- Convert the MAC address `a0:f4:b7:e2:3b:01` to `F4-A0-3B-01-B7-E2`.
 - Ensure the address is in uppercase letters.
 
 ### Additional Tips

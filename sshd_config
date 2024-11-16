@@ -1,0 +1,61 @@
+# This is the sshd server system-wide configuration file.
+
+# The strategy used for options in the default sshd_config shipped with
+# OpenSSH is to specify options with their default value where
+# possible, but leave them commented. Uncommented options override the
+# default value.
+
+Include /etc/ssh/sshd_config.d/*.conf
+
+# Set SSH port
+Port 22**
+
+# Only allow key-based authentication (disable password authentication)
+PasswordAuthentication no
+PubkeyAuthentication yes
+
+# Disable root login
+PermitRootLogin no
+
+# Set the location for authorized keys (default is .ssh/authorized_keys)
+AuthorizedKeysFile     .ssh/authorized_keys
+
+# Logging
+LogLevel VERBOSE
+
+# Disable empty passwords
+PermitEmptyPasswords no
+
+# Other settings for security and convenience
+# Disable challenge-response passwords (e.g., no KBD interactive)
+KbdInteractiveAuthentication no
+
+# Disable PAM (Pluggable Authentication Modules)
+UsePAM no
+
+# Allow agent forwarding (if necessary)
+# AllowAgentForwarding yes
+
+# Allow TCP forwarding (if necessary)
+# AllowTcpForwarding yes
+
+# Enable X11 forwarding (if necessary)
+X11Forwarding yes
+
+# Specify the use of only a secure set of ciphers
+Ciphers aes256-ctr,aes192-ctr,aes128-ctr
+MACs hmac-sha2-512,hmac-sha2-256
+KexAlgorithms curve25519-sha256@libssh.org,diffie-hellman-group-exchange-sha256
+
+# Ensure that the user environment variables are accepted
+AcceptEnv LANG LC_*
+
+# Disable banner (if not needed)
+# Banner none
+
+# Subsystem configuration for SFTP
+Subsystem       sftp    /usr/lib/openssh/sftp-server
+
+# Optional - Client Alive Interval to close idle sessions
+ClientAliveInterval 300
+ClientAliveCountMax 0

@@ -1,0 +1,15 @@
+- Public hostname: ci-cd.inotech-pk.com
+  Service: jenkins master server
+
+- Public hostname: lxd.inotech-pk.com
+  Service: lxc lxd webui
+
+- Public hostname: grafana.inotech-pk.com
+  Service: grafana
+
+- Public hostname: cad.inotech-pk.com
+  Service: cAdvisor
+
+# All services are running on the same server and will not be 
+# accesible to the public SSL/TLS are implemented for all services
+# dns records are created for all services using cloudflare

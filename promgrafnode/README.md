@@ -13,14 +13,14 @@ touch promgrafnode/docker-compose.yml && \
 touch promgrafnode/prometheus/prometheus.yml
 ```
 
- * ```
- * promgrafnode/
- * ├── docker-compose.yml
- * ├── grafana/
- * │   └── provisioning/
- * └── prometheus/
- *     └── prometheus.yml
- * ```
+```
+  promgrafnode/
+  ├── docker-compose.yml
+  ├── grafana/
+  │   └── provisioning/
+  └── prometheus/
+      └── prometheus.yml
+ ```
 
 ## Starting the Stack
 
@@ -60,10 +60,10 @@ Running `docker compose up -d` again will confirm that all containers are runnin
 ```
 
 The following services will be started:
- * - Redis
- * - Node Exporter
- * - Grafana
- * - cAdvisor
- * - Prometheus
+ * Redis
+ * Node Exporter
+ * Grafana
+ * cAdvisor
+ * Prometheus
  
  If you need to adjust permissions for configuration files, use `chmod` as necessary.

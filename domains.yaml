@@ -4,6 +4,9 @@
 - Public hostname: lxd.inotech-pk.com
   Service: lxc lxd webui
 
+- Public hostname: prom.inotech-pk.com
+  Service: prometheus
+
 - Public hostname: grafana.inotech-pk.com
   Service: grafana
 
